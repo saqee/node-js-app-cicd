@@ -23,4 +23,4 @@ jobs:
       - name: pull image from docker hub
         run: docker pull saqeebahmed/nodejs-app-cicd:latest
       - name: Run docker  container
-        run: docker run -d -p 4000:4000 --name nodejs-app-container -e MONGO_PASSWORD='${{ secrets.MONGO_PASSWORD }}'  saqeebahmed/nodejs-app-cicd
+        run: docker run -d -p 4000:4000 --name nodejs-app-container -e MONGO_PASSWORD='${{ secrets.MONGO_PASSWORD }}' saqeebahmed/nodejs-app-cicd:latest

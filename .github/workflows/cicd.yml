@@ -25,4 +25,4 @@ jobs:
       - name: remove container
         run: docker rm -f nodejs-app-container
       - name: Run docker  container
-        run: docker run -d -p 4000:4000 --name nodejs-app-container -e MONGO_PASSWORD='${{ secrets.MONGO_PASSWORD }}' saqeebahmed/nodejs-app-cicd:latest
+        run: docker run -d --rm -p 4000:4000 --name nodejs-app-container -e MONGO_PASSWORD=${{ secrets.MONGO_PASSWORD }} saqeebahmed/nodejs-app-cicd
